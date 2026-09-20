@@ -1,0 +1,141 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgb(13, 13, 13);
+
+  margin: 0;
+  padding: 0;
+
+  color: rgb(249, 250, 251);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: rgb(5, 0, 15);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 80px;
+  height: 63px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spider-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+
+  margin-top: 10px;
+  margin-right: 17px;
+}
+
+.header-title h2 {
+  font-size: 28px;
+  color: rgb(249, 250, 251);
+  display: inline-block;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nav-links {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(249, 250, 251);
+  margin-left: 15px;
+  font-size: 17px;
+}
+
+.nav-links a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.nav-links a:active {
+  color: rgb(249, 250, 251);
+}
+.aboutBtn {
+    background: transparent;
+    border: none;
+    color: rgb(249, 250, 251);
+
+    cursor: pointer;
+}
+
+.drop-down {
+    display: none;
+}
+
+.hero-section {
+  margin-top: 64px;
+  width: 100%;
+  min-height: 95vh;
+
+  background-image: url("images/background-tobey.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(2, 0, 10, 0.192);
+  background-blend-mode: darken;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+    position: relative;
+    font-size: 80px;
+    text-shadow: 4px 4px 8px black;
+    top: -90px;
+    right: -80px;
+}
