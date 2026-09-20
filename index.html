@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Spider-Man: Tobey Maguire</title>
 </head>
@@ -21,16 +21,19 @@
 
         <nav class="nav-links">
             <a href="#home">Home</a>
-            <span>
-                <a href="#about">About</a>
-                <button class="aboutBtn">▼</button>
-            </span>
-            <div class="drop-down">
-                <a href="#trilogy">Trilogy</a>
-                <a href="#characters">Characters</a>
-                <a href="#villains">Villains</a>
-                <a href="#legacy">Legacy</a>
+
+            <div class="about-dropdown">
+                <button id="aboutBtn" class="aboutBtn">About ▼</button>
+                
+                <div id="dropDown-Container" class="dropDown">
+                    <a href="#about">Introduction</a>
+                    <a href="#trilogy">Trilogy</a>
+                    <a href="#characters">Characters</a>
+                    <a href="#villains">Villains</a>
+                    <a href="#legacy">Legacy</a>
+                </div>
             </div>
+
             <a href="#gallery">Gallery</a>
         </nav>
     </header>

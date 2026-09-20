@@ -27,7 +27,6 @@ body {
     sans-serif;
   overflow-x: hidden;
 }
-
 header {
   background-color: rgb(5, 0, 15);
 
@@ -44,13 +43,14 @@ header {
 
   width: 100%;
   box-sizing: border-box;
+
   z-index: 1000;
   backdrop-filter: blur(8px);
 }
 
 .header-title {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .spider-logo {
@@ -65,49 +65,112 @@ header {
 .header-title h2 {
   font-size: 28px;
   color: rgb(249, 250, 251);
-  display: inline-block;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  margin: 0;
+
   user-select: none;
 }
 
 .nav-links {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
   user-select: none;
 }
 
-.nav-links a {
+.nav-links > a {
   text-decoration: none;
   color: rgb(249, 250, 251);
-  margin-left: 15px;
-  font-size: 17px;
+
+  font-size: 18px;
+  margin: 0;
 }
 
-.nav-links a:hover {
+.nav-links > a:hover {
   color: rgb(255, 0, 0);
 }
 
-.nav-links a:active {
-  color: rgb(249, 250, 251);
+.about-dropdown {
+  position: relative;
 }
+
 .aboutBtn {
-    background: transparent;
-    border: none;
-    color: rgb(249, 250, 251);
+  background: none;
+  border: none;
 
-    cursor: pointer;
+  margin-top: 5px;
+
+  color: rgb(249, 250, 251);
+
+  cursor: pointer;
+  font-size: 17px;
+
+  padding: 4px;
 }
 
-.drop-down {
-    display: none;
+.aboutBtn:hover {
+  color: rgb(255, 0, 0);
+}
+
+.dropDown {
+  position: absolute;
+
+  top: calc(100% + 15px);
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100px;
+
+  background-color: rgb(5, 0, 15);
+  border-radius: 5px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  padding: 0 20px;
+
+  max-height: 0;
+  overflow: hidden;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease,
+    opacity 0.3s ease;
+}
+
+.dropDown.active {
+  max-height: 300px;
+  padding: 20px;
+
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropDown a {
+  display: block;
+
+  color: rgb(249, 250, 251);
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  margin: 0;
+  padding: 10px;
+
+  border-radius: 8px;
+}
+
+.dropDown a:hover {
+  background-color: rgb(12, 9, 19);
 }
 
 .hero-section {
-  margin-top: 64px;
+  margin-top: 63px;
   width: 100%;
   min-height: 95vh;
 
@@ -133,9 +196,9 @@ header {
 }
 
 .hero-content h1 {
-    position: relative;
-    font-size: 80px;
-    text-shadow: 4px 4px 8px black;
-    top: -90px;
-    right: -80px;
+  position: relative;
+  font-size: 80px;
+  text-shadow: 4px 4px 8px black;
+  top: -90px;
+  right: -80px;
 }
